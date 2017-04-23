@@ -18,25 +18,25 @@
 	
 	function wskazowka1() {
 		if (numergracza % 2 == 0){
-		alert("Numer parzysty");
+		alert("WSKAZÓWKA 1: Numer parzysty");
 		}
 		else {
-		alert("Numer nieparzysty");
+		alert("WSKAZÓWKA 1: Numer nieparzysty");
 		}
 	}
 	
 	function wskazowka2() {
 		if (numergracza < 10){
-		alert("Numer jednocyfrowy");
+		alert("WSKAZÓWKA 2: Numer jednocyfrowy");
 		}
 		else {
 			for (var i = 3; i < 99; i++){
 				if (i % numergracza == 0){
-				alert("Liczba dwucyfrowa podzielna przez" + i);
+				alert("WSKAZÓWKA 2: Liczba dwucyfrowa podzielna przez" + i);
 				break;
 				}
 				else {
-				alert("Liczba dwucyfrowa, pierwsza");
+				alert("WSKAZÓWKA 2: Liczba dwucyfrowa, pierwsza");
 				}
 			}
 		}
@@ -46,7 +46,7 @@
 		var r = numergracza % 10;
 		var low = numergracza - r;
 		var hight = low + 10;
-		alert("Numer z zakresu od " + low + " do " + hight );
+		alert("WSKAZÓWKA 3: Numer z zakresu od " + low + " do " + hight );
 	}
 	
 	function checknumer(){
