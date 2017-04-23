@@ -43,12 +43,10 @@
 	}
 	
 	function wskazowka3() {
-		for (var j=0; j<90; j=j + 10){
-			if (numergracza < j){
-				var k = j + 10;
-				alert("Numer z zakresu od" + j + "do" + k);
-			}
-		}
+		var r = numergracza % 10;
+		var low = numergracza - r;
+		var hight = low + 10;
+		alert("Numer z zakresu od " + low + " do " + hight );
 	}
 	
 	function checknumer(){
