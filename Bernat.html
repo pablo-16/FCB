@@ -3,14 +3,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Numer Neuera</title>
+	<title>Numer Bernata</title>
 	<script>
+	
+	var numergracza = 1;
+	var mistakes = 0;
 	
 	function init(){
 		var sprawdznumer = document.getElementById("sprawdznumer");
 		sprawdznumer.onclick = checknumer;
 		var numer = document.getElementById("numer");
 		numer.onkeypress = handleKeyPress;
+	}
+	
+	function wskazowka1() {
+		if (numergracza % 2 == 0){
+		alert("WSKAZÓWKA 1: Numer parzysty");
+		}
+		else {
+		alert("WSKAZÓWKA 1: Numer nieparzysty");
+		}
+	}
+	
+	function wskazowka2() {
+		if (numergracza < 10){
+		alert("WSKAZÓWKA 2: Numer jednocyfrowy");
+		}
+		else {
+			for (var i = 3; i < 99; i++){
+				if (i % numergracza == 0){
+				alert("WSKAZÓWKA 2: Liczba dwucyfrowa podzielna przez" + i);
+				break;
+				}
+				else {
+				alert("WSKAZÓWKA 2: Liczba dwucyfrowa, pierwsza");
+				break;
+				}
+			}
+		}
+	}
+	
+	function wskazowka3() {
+		var r = numergracza % 10;
+		var low = numergracza - r;
+		var hight = low + 10;
+		alert("WSKAZÓWKA 3: Numer z zakresu od " + low + " do " + hight );
 	}
 	
 	function checknumer(){
@@ -21,17 +58,27 @@
 			numer.value="";
 		}
 		else {
-		if (yournumer === "18")
+			if (yournumer == numergracza)
 			{
-			var reakcja = document.getElementById("reakcja");
-			reakcja.innerHTML="<a href=\"Lahm.html\">Dobrze! Przejdź dalej</a>";
+				var reakcja = document.getElementById("reakcja");
+				reakcja.innerHTML="<a href=\"Alaba.html\">Dobrze! Przejdź dalej</a>";
 			}
 			else {
-			var reakcja = document.getElementById("reakcja");
-			reakcja.innerHTML="Źle! Próbuj dalej.";
+				mistakes ++;
+				var reakcja = document.getElementById("reakcja");
+				reakcja.innerHTML="Źle! Próbuj dalej.";
+				if (mistakes == 3){
+					wskazowka1();
+				}
+				else if (mistakes == 5){
+					wskazowka2();
+				}
+				else if (mistakes == 7){
+					wskazowka3();
+				}
 			}
 			numer.value="";
-			}
+		}
 	}
 	
 	function handleKeyPress(e) {
@@ -41,6 +88,8 @@
 			return false;
 		}
 	}
+	
+	
 	
 	window.onload = init;
 	
