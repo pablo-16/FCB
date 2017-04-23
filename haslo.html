@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Hasło</title>
+	<script>
+	
+	function init(){
+		var sprawdzhaslo = document.getElementById("sprawdzhaslo");
+		sprawdzhaslo.onclick = checkpassword;
+	}
+	
+	function checkpassword(){
+		var yourpasswordInput = document.getElementById("haslo");
+		var yourpassword = yourpasswordInput.value;
+		if (yourpassword === "Ancellotti")
+			{
+			window.location.href = "BayernMonachium.html";
+			}
+			else {
+			alert ("Wpisałeś niepoprawne hasło!");
+			}
+	}
+	
+	window.onload = init;
+	
+	</script>
+	<link type="text/css" rel="stylesheet" href="haslo.css" />
+</head>
+<body>
+<div id="calastrona">
+<h1>Aby przejść do oficialnej strony Bayernu Monachium podaj hasło:</h1>
+<form>
+<input type="password" id="haslo" placeholder="Podaj hasło">
+<input type="button" id="sprawdzhaslo" value="Zaloguj">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+	background-image: url(Obrazy/tlo.png);
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	margin: 0px;
+}
+
+#calastrona {
+	width: 1000px;
+	height: 1120px;
+	background-color: #F83D3D;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	text-align: center;
+	}
+	
+h1{
+	font-size: 500%;
+	color: white;
+}
+
+#quiz {
+	position: absolute;
+	top: 230px;
+	left: 462px;
+}
+
+#numery {
+	position: absolute;
+	top: 230px;
+	left: 802px;
+}
+
+#zawodnik {
+	position: absolute;
+	top: 230px;
+	left: 1142px;
+}

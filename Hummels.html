@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Numer Neuera</title>
+	<script>
+	
+	function init(){
+		var sprawdznumer = document.getElementById("sprawdznumer");
+		sprawdznumer.onclick = checknumer;
+		var numer = document.getElementById("numer");
+		numer.onkeypress = handleKeyPress;
+	}
+	
+	function checknumer(){
+		var yournumerInput = document.getElementById("numer");
+		var yournumer = yournumerInput.value;
+		if (yournumer === "5")
+			{
+			var reakcja = document.getElementById("reakcja");
+			reakcja.innerHTML="<a href=\"Martinez.html\">Dobrze! Przejdź dalej</a>";
+			}
+			else {
+			var reakcja = document.getElementById("reakcja");
+			reakcja.innerHTML="Źle! Próbuj dalej.";
+			}
+			numer.value="";
+	}
+	
+	function handleKeyPress(e) {
+		var sprawdznumer = document.getElementById("sprawdznumer");
+		if (e.keyCode === 13) {
+			sprawdznumer.click();
+			return false;
+		}
+	}
+	
+	window.onload = init;
+	
+	</script>
+	<link type="text/css" rel="stylesheet" href="numery.css" />
+</head>
+<body>
+<div id="calastrona">
+<h1>Z jakim numerem gra?</h1>
+<img src="Obrazy/Numery/HummelsX.jpg">
+<form>
+<input type="text" id="numer" placeholder="Podaj Numer (np: 53)">
+<input type="button" id="sprawdznumer" value="Sprawdź">
+</form>
+<p id="reakcja"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Numer Neuera</title>
+	<script>
+	
+	var numergracza = 1;
+	var mistakes = 0;
+	
+	function init(){
+		var sprawdznumer = document.getElementById("sprawdznumer");
+		sprawdznumer.onclick = checknumer;
+		var numer = document.getElementById("numer");
+		numer.onkeypress = handleKeyPress;
+	}
+	
+	function wskazowka1() {
+		if (numergracza % 2 == 0){
+		alert("Numer parzysty");
+		}
+		else {
+		alert("Numer nieparzysty");
+		}
+	}
+	
+	function wskazowka2() {
+		if (numergracza < 10){
+		alert("Numer jednocyfrowy");
+		}
+		else {
+			for (var i = 3; i < 99; i++){
+				if (i % numergracza == 0){
+				alert("Liczba dwucyfrowa podzielna przez" + i);
+				break;
+				}
+				else {
+				alert("Liczba dwucyfrowa, pierwsza");
+				}
+			}
+		}
+	}
+	
+	function wskazowka3() {
+		for (var j=0; j<90; j=j + 10){
+			if (numergracza < j){
+				var k = j + 10;
+				alert("Numer z zakresu od" + j + "do" + k);
+			}
+		}
+	}
+	
+	function checknumer(){
+		var yournumerInput = document.getElementById("numer");
+		var yournumer = yournumerInput.value;
+		if (yournumer <= 0 || yournumer >= 99){
+			alert("Numery na koszulkach mogą być jedynie z zakresu 1-99!");
+			numer.value="";
+		}
+		else {
+			if (yournumer == numergracza)
+			{
+				var reakcja = document.getElementById("reakcja");
+				reakcja.innerHTML="<a href=\"Boateng.html\">Dobrze! Przejdź dalej</a>";
+			}
+			else {
+				mistakes ++;
+				var reakcja = document.getElementById("reakcja");
+				reakcja.innerHTML="Źle! Próbuj dalej.";
+				if (mistakes == 3){
+					wskazowka1();
+				}
+				else if (mistakes == 5){
+					wskazowka2();
+				}
+				else if (mistakes == 7){
+					wskazowka3();
+				}
+			}
+			numer.value="";
+		}
+	}
+	
+	function handleKeyPress(e) {
+		var sprawdznumer = document.getElementById("sprawdznumer");
+		if (e.keyCode === 13) {
+			sprawdznumer.click();
+			return false;
+		}
+	}
+	
+	
+	
+	window.onload = init;
+	
+	</script>
+	<link type="text/css" rel="stylesheet" href="numery.css" />
+</head>
+<body>
+<div id="calastrona">
+<h1>Z jakim numerem gra?</h1>
+<img src="Obrazy/Numery/NeuerX.jpg">
+<form>
+<input type="text" id="numer" placeholder="Podaj Numer (np: 53)">
+<input type="button" id="sprawdznumer" value="Sprawdź">
+</form>
+<p id="reakcja"></p>
+</div>
+</body>
+</html>

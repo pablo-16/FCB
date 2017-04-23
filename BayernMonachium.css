@@ -1,0 +1,122 @@
+body {
+	background-image: url(Obrazy/tlo.png);
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	margin: 0px;
+}
+#tytul {
+	line-height: 1,1em;
+	font-style: italic;
+	font-size: 25px;
+	text-align: right;
+	color: white;
+	background-color: #5D5BF5;
+	padding: 20px;
+	font-weight: bold;
+	background-image: url(Obrazy/Herb.png);
+	background-repeat: no-repeat;
+}
+#calastrona {
+	width: 1000px;
+	height: 1120px;
+	background-color: #F83D3D;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a{
+	color: blue;
+}
+
+th {
+	border: 1px solid black;
+	padding: 0px;
+	padding-left:44px;
+	padding-right: 44px;
+	font-size: 22px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #b22222;
+	}
+
+table {
+	margin-left: 0px;
+	margin-right: 0px;
+	border: thin solid black;
+	background-color: #b22222;
+	}
+	
+#opcjedowybrania a{
+	color: white;
+}
+
+h2{
+	font-size: 25px;
+}
+
+#ankieta{
+	line-height: 1,9em;
+	font-style: italic;
+	font-family: Georgia, Times, serif;
+	color: black;
+	border: thin dashed black;
+	background-color: #F51E45;
+	padding: 25px;
+	padding-left: 80px;
+	margin: 40px;
+	margin-right: 300px;
+	
+}
+
+#opisnewsa1{
+	position: absolute;
+	top: 329px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+
+#opisnewsa2{
+	position: absolute;
+	top: 475px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+#opisnewsa3{
+	position: absolute;
+	top: 620px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+#pasekboczny  {
+	float: right;
+	margin-right: 15px;
+	text-align: center;
+	border: 2px dotted blue;
+	font-family: Times, Georgia, serif;
+	font-size: 80%;
+	padding: 10px 0px;
+	width: 270px;
+	margin-top: 43px;
+	font-weight: bolder;
+}
+
+#pasekboczny h3 {
+	font-size: 2em;
+	font-style: italic:
+}
+
+#stopka{
+	font-size: 50%;
+	text-align: center;
+}

@@ -1,0 +1,87 @@
+#calastrona {
+	width: 1000px;
+	height: 1120px;
+	background-color: #F83D3D;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	}
+	
+h1{
+	font-size: 400%;
+	color: white;
+	text-align: center;
+}
+
+body {
+	background-image: url(Obrazy/tlo.png);
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	margin: 0px;
+}
+
+#opisnewsa1{
+	position: absolute;
+	margin-top: -190px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+
+#opisnewsa2{
+	position: absolute;
+	margin-top: -180px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+#opisnewsa3{
+	position: absolute;
+	margin-top: -170px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+#opisnewsa4{
+	position: absolute;
+	margin-top: -160px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+
+#opisnewsa5{
+	position: absolute;
+	margin-top: -170px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+#opisnewsa6{
+	position: absolute;
+	margin-top: -170px;
+	right:800px;
+	background-color: #F83D3D;
+	font-size: 85%;
+	padding: 0px;
+	width: 500px;
+}
+
+img {
+	margin-bottom: 20px;
+}

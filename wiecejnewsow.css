@@ -1,0 +1,33 @@
+#calastrona {
+	width: 1000px;
+	height: 1120px;
+	background-color: #F83D3D;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	text-align: center;
+	}
+	
+h1{
+	font-size: 400%;
+	color: white;
+}
+
+p{
+	font-size: 150%;
+}
+	
+#info {
+	margin: 50px 150px 80px 150px;
+	padding-bottom: 10px;
+	padding-left: 60px;
+	padding-right: 60px;
+	border: 4px dotted blue;
+}
+body {
+	background-image: url(Obrazy/tlo.png);
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	margin: 0px;
+}

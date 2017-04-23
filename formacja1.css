@@ -1,0 +1,36 @@
+#calastrona {
+	width: 830px;
+	height: 1180px;
+	background-image: url(Obrazy/Formacje/boisko2.png);
+	background-repeat: no-repeat;
+	background-color: green;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	background-image: url(Obrazy/tlo.png);
+	font-weight: 2px;
+}
+
+table {
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+	
+th {
+	padding: 65px 6px;
+}
+
+select {
+	height: 30px;
+	width: 150px;
+	background-color: red;
+	text-align: center;
+}
+
+#wyslij {
+	width: 80px;
+	margin-bottom: 40px;
+	margin-left: 377px;
+}
