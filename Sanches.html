@@ -26,22 +26,24 @@
 	}
 	
 	function wskazowka2() {
+		var isprime = true;
 		if (numergracza < 10){
 		alert("WSKAZÓWKA 2: Numer jednocyfrowy");
 		}
 		else {
 			for (var i = 3; i < numergracza; i++){
 				if (numergracza % i == 0){
+				isprime = false;
 				alert("WSKAZÓWKA 2: Liczba podzielna przez " + i);
 				break;
 				}
-				else {
+			}
+				if (isprime == true) {
 				alert("WSKAZÓWKA 2: Liczba pierwsza");
 				break;
 				}
 			}
 		}
-	}
 	
 	function wskazowka3() {
 		var r = numergracza % 10;
@@ -51,6 +53,7 @@
 	}
 	
 	function checknumer(){
+		alert("OK");
 		var yournumerInput = document.getElementById("numer");
 		var yournumer = yournumerInput.value;
 		if (yournumer <= 0 || yournumer >= 99){
