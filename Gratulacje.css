@@ -2,6 +2,7 @@ body {
 	background-image: url(Obrazy/tlo.png);
 	font-family: Verdana, Geneva, Arial, sans-serif;
 	margin: 0px;
+}
 
 #calastrona {
 	width: 1000px;
@@ -9,4 +10,13 @@ body {
 	background-color: #F83D3D;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+a{
+	margin-right:-600px;
 }
