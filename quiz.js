@@ -12,9 +12,9 @@ function sprawdz(){
 	}
 
 	if (dobrze == questions.length){
-		alert("OK");
+		window.location.href = "BayernMonachium.html";
 	}
 	else {
-			alert("NIE! "+dobrze);
+		window.location.href = "GratulacjeNumery.html";
 	}
 }
