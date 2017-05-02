@@ -4,33 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Pytanie pierwsze</title>
-	<link type="text/css" rel="stylesheet" href="BayernMonachium.css" />
-	<script>
-var dobrze = 0;
-	
-function sprawdz(){
-	if(document.pytanie1.odp[2].checked==true){
-	dobrze ++;
-	}
-	if(document.pytanie2.odp[0].checked==true){
-	dobrze ++;
-	}
-	if(document.pytanie3.odp[0].checked==true){
-	dobrze ++;
-	}
-	if(document.pytanie4.odp[1].checked==true){
-	dobrze ++;
-	}
-	
-	if (dobrze == 4){
-		window.location.href = "BayernMonachium.html";
-	}
-	else {
-		window.location.href = "tabela.html";
-	}
-}
-
-</script>
+	<link type="text/css" rel="stylesheet" href="quiz.css" />
+	<script src="quiz.js"></script>
 </head>
 <body>
 <div id="calastrona">
@@ -62,6 +37,84 @@ function sprawdz(){
 <input type="radio" name="odp"> Arturo Vidal <br>
 <input type="radio" name="odp"> Robert Lewandowski <br>
 </form>
+<h3>5.W którym roku został założony klub?</h3>
+<form name="pytanie5">
+<input type="radio" name="odp"> 1920<br>
+<input type="radio" name="odp"> 1930<br>
+<input type="radio" name="odp"> 1945<br>
+<input type="radio" name="odp"> 1900 <br>
+</form>
+<h3>6.Który zawodnik dostał najwięcej zółtych kartek w tym sezonie?</h3>
+<form name="pytanie6">
+<input type="radio" name="odp"> Javi Martinez <br>
+<input type="radio" name="odp"> Robert Lewandowski<br>
+<input type="radio" name="odp">  Xabi Alonso <br>
+<input type="radio" name="odp"> Arturo Vidal <br>
+</form>
+<h3>7.Który zawodnik zaliczył najwięcej występów dla klubu z Bawarii?</h3>
+<form name="pytanie7">
+<input type="radio" name="odp"> Gerd Muller <br>
+<input type="radio" name="odp"> Bastian Schweinstiger<br>
+<input type="radio" name="odp"> Oliver Kahn <br>
+<input type="radio" name="odp"> Josef Maier <br>
+</form>
+<h3>8.Ile porażek zanotował Bayern w tym sezonie?</h3>
+<form name="pytanie8">
+<input type="radio" name="odp"> 1<br>
+<input type="radio" name="odp"> 2<br>
+<input type="radio" name="odp"> 3 <br>
+<input type="radio" name="odp"> 4 <br>
+</form>
+<h3>9.Ile razy Bayern wygrał ligę?</h3>
+<form name="pytanie9">
+<input type="radio" name="odp"> 20 <br>
+<input type="radio" name="odp"> 25<br>
+<input type="radio" name="odp"> 30 <br>
+<input type="radio" name="odp"> 35 <br>
+</form>
+<h3>10.Ile razy Bayern przegrał w tym sezonie na Alianz Arenie?</h3>
+<form name="pytanie10">
+<input type="radio" name="odp"> 0<br>
+<input type="radio" name="odp"> 1<br>
+<input type="radio" name="odp"> 2<br>
+<input type="radio" name="odp"> 3 <br>
+</form>
+<h3>11.Ilu kibiców może pomieścić Alianz Arena?</h3>
+<form name="pytanie11">
+<input type="radio" name="odp">95 tys.<br>
+<input type="radio" name="odp"> 65 tys.<br>
+<input type="radio" name="odp"> 85 tys.<br>
+<input type="radio" name="odp"> 75 tys. <br>
+</form>
+<h3>12.Kto zdobył najwięcej goli dla Bayernu w tym sezonie (oprócz Lewandowskiego)?</h3>
+<form name="pytanie12">
+<input type="radio" name="odp"> Thiago Alcantara<br>
+<input type="radio" name="odp"> Douglas Costa<br>
+<input type="radio" name="odp"> Arturo Vidal <br>
+<input type="radio" name="odp"> Arjen Robben <br>
+</form>
+<h3>13.Kiedy ostatnio Bayern zdobył potrójną koronę?</h3>
+<form name="pytanie13">
+<input type="radio" name="odp"> 2010/11<br>
+<input type="radio" name="odp"> 2011/12<br>
+<input type="radio" name="odp"> 2012/13<br>
+<input type="radio" name="odp"> 2013/14 <br>
+</form>
+<h3>14.Kto ma najwięcej asyst w tym sezonie?</h3>
+<form name="pytanie14">
+<input type="radio" name="odp"> Thiago Alcantara<br>
+<input type="radio" name="odp"> Douglas Costa<br>
+<input type="radio" name="odp"> Frank Ribery <br>
+<input type="radio" name="odp"> Thomas Muller <br>
+</form>
+<h3>15.Jakim wynikiem zakończył się pierwszy mecz sezonu - Bayern vs Bremen?</h3>
+<form name="pytanie15">
+<input type="radio" name="odp"> 5-0<br>
+<input type="radio" name="odp"> 4-0<br>
+<input type="radio" name="odp"> 7-0 <br>
+<input type="radio" name="odp"> 6-0 <br>
+</form>
+
 <input type="button" onclick="sprawdz()" value="Sprawdź!">
 </div>
 </body>

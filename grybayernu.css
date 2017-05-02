@@ -24,17 +24,11 @@ h1{
 #quiz {
 	position: absolute;
 	top: 230px;
-	left: 462px;
+	left: 590px;
 }
 
 #numery {
 	position: absolute;
 	top: 230px;
-	left: 802px;
-}
-
-#zawodnik {
-	position: absolute;
-	top: 230px;
-	left: 1142px;
+	left: 1000px;
 }

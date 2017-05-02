@@ -6,6 +6,7 @@
 	<title>Pytanie pierwsze</title>
 	<link type="text/css" rel="stylesheet" href="BayernMonachium.css" />
 	<script src="quiz.js"></script>
+
 </head>
 <body>
 <div id="calastrona">
@@ -16,28 +17,16 @@
 <input type="radio" name="odp"> Tom Starke <br>
 <input type="radio" name="odp"> Xabi Alonso <br>
 </form>
-<h3>2.Jak nazywa się obecny prezydent Bayernu?</h3>
-<form name="pytanie2">
-<input type="radio" name="odp">Uli Hoeneß <br>
-<input type="radio" name="odp"> Mathias Sammer  <br>
-<input type="radio" name="odp"> Franz Beckenbauer <br>
-<input type="radio" name="odp"> Karl-Heinz Rummenigge<br>
-</form>
-<h3>3.Jak nazywa się maskotka klubu??</h3>
-<form name="pytanie3">
-<input type="radio" name="odp"> Niedźwiedź Berni <br>
-<input type="radio" name="odp"> Niedźwiedź Fritz  <br>
-<input type="radio" name="odp"> Lew Brian <br>
-<input type="radio" name="odp"> Lew  Erwin<br>
-</form>
-<h3>4.Który zawodnik jest największym zakupem Bayernu?</h3>
-<form name="pytanie4">
-<input type="radio" name="odp"> Manuel Neuer <br>
-<input type="radio" name="odp"> Javi Martinez<br>
-<input type="radio" name="odp"> Arturo Vidal <br>
-<input type="radio" name="odp"> Robert Lewandowski <br>
-</form>
+
+
+<input type="button" onclick="next()" value="Następne pytanie">
 <input type="button" onclick="sprawdz()" value="Sprawdź!">
 </div>
+
+<script>
+    function next(){
+        let questions = ["Kto jest najstarszym zawodnikiem Bayernu?", ]
+    }
+</script>
 </body>
 </html>
