@@ -87,25 +87,10 @@
 
             var odpowiedz = document.getElementById("odpowiedz");
 
-            if (odpowiedz.odp[ansewrs[i]].checked == true) {
-                dobrze++;
-            }
-
-            var numerpytania = document.getElementById("numerpytania");
-            numerpytania.innerHTML = questionnumber[i];
-
-            var pytanie = document.getElementById("pytanie");
-            pytanie.innerHTML = question[i];
-
-            odpowiedz.innerHTML = odpowiedzi[i];
-
-            var photo = document.getElementById("zdjecie");
-            photo.innerHTML = photos[i];
-
 
             if (i == questionnumber.length) {
                 var photo = document.getElementById("zdjecie");
-                photo.innerHTML = VidalX.jpg;
+                photo.innerHTML = '<img src="Obrazy/Numery/VidalX.jpg">';
                 var numerpytania = document.getElementById("numerpytania");
                 numerpytania.innerHTML = "Gratulacje!";
                 var pytanie = document.getElementById("pytanie");
@@ -113,6 +98,22 @@
                 var odpowiedz = document.getElementById("odpowiedz");
                 odpowiedz.innerHTML = "";
                 alert("Zdobyłeś " + dobrze + " punktów!");
+            } else {
+                if (odpowiedz.odp[ansewrs[i]].checked == true) {
+                    dobrze++;
+                }
+
+                var numerpytania = document.getElementById("numerpytania");
+                numerpytania.innerHTML = questionnumber[i];
+
+                var pytanie = document.getElementById("pytanie");
+                pytanie.innerHTML = question[i];
+
+                odpowiedz.innerHTML = odpowiedzi[i];
+
+                var photo = document.getElementById("zdjecie");
+                photo.innerHTML = photos[i];
+
             }
         }
     </script>
