@@ -1,134 +1,140 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Testy</title>
-    
-<script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Testy</title>
 
-var i = 0;
-var dobrze=0;
+    <script>
+        var i = 0;
+        var dobrze = 0;
 
-    function next(){
+        function next() {
 
-        i++;
+            i++;
 
 
             var ansewrs = [2, 0, 0, 1, 3, 3, 3, 1, 1, 0, 3, 3, 2, 3, 3];
 
-            let questionnumber = [ "Pytanie 1",
-                                   "Pytanie 2",
-                                   "Pytanie 3",
-                                   "Pytanie 4",
-                                   "Pytanie 5",
-                                   "Pytanie 6",
-                                   "Pytanie 7",
-                                   "Pytanie 8",
-                                   "Pytanie 9",
-                                   "Pytanie 10",
-                                   "Pytanie 11",
-                                   "Pytanie 12",
-                                   "Pytanie 13",
-                                   "Pytanie 14",
-                                   "Pytanie 15"];
+            let questionnumber = ["Pytanie 1",
+                "Pytanie 2",
+                "Pytanie 3",
+                "Pytanie 4",
+                "Pytanie 5",
+                "Pytanie 6",
+                "Pytanie 7",
+                "Pytanie 8",
+                "Pytanie 9",
+                "Pytanie 10",
+                "Pytanie 11",
+                "Pytanie 12",
+                "Pytanie 13",
+                "Pytanie 14",
+                "Pytanie 15"
+            ];
 
             let question = ["Kto jest najstarszym zawodnikiem Bayernu?",
-                            "Jak nazywa się obecny prezydent Bayernu?",
-                            "Jak nazywa się maskotka klubu?",
-                            "Który zawodnik jest największym zakupem Bayernu?",
-                            "W którym roku został założony klub?",
-                            "Który zawodnik dostał najwięcej zółtych kartek w tym sezonie?",
-                            "Który zawodnik zaliczył najwięcej występów dla klubu z Bawarii?",
-                            "Ile porażek zanotował Bayern w tym sezonie w Bundeslidze?",
-                            "Ile razy Bayern wygrał ligę?",
-                            "Ile razy Bayern przegrał w tym sezonie na Alianz Arenie w Bundeslidze?",
-                            "Ilu kibiców może pomieścić Alianz Arena?",
-                            "Kto zdobył najwięcej goli dla Bayernu w tym sezonie (oprócz Lewandowskiego)?",
-                            "Kiedy ostatnio Bayern zdobył potrójną koronę?",
-                            "Kto z Bayernu ma najwięcej asyst w tym sezonie w Bundeslidze?",
-                            "Jakim wynikiem zakończył się pierwszy mecz sezonu - Bayern vs Bremen?"];
+                "Jak nazywa się obecny prezydent Bayernu?",
+                "Jak nazywa się maskotka klubu?",
+                "Który zawodnik jest największym zakupem Bayernu?",
+                "W którym roku został założony klub?",
+                "Który zawodnik dostał najwięcej zółtych kartek w tym sezonie?",
+                "Który zawodnik zaliczył najwięcej występów dla klubu z Bawarii?",
+                "Ile porażek zanotował Bayern w tym sezonie w Bundeslidze?",
+                "Ile razy Bayern wygrał ligę?",
+                "Ile razy Bayern przegrał w tym sezonie na Alianz Arenie w Bundeslidze?",
+                "Ilu kibiców może pomieścić Alianz Arena?",
+                "Kto zdobył najwięcej goli dla Bayernu w tym sezonie (oprócz Lewandowskiego)?",
+                "Kiedy ostatnio Bayern zdobył potrójną koronę?",
+                "Kto z Bayernu ma najwięcej asyst w tym sezonie w Bundeslidze?",
+                "Jakim wynikiem zakończył się pierwszy mecz sezonu - Bayern vs Bremen?"
+            ];
 
-            let odpowiedzi =["<input type=\"radio\" name=\"odp\"> Arjen Robben <br><input type=\"radio\" name=\"odp\"> Philipp Lahm <br> <input type=\"radio\" name=\"odp\"> Tom Starke <br><input type=\"radio\" name=\"odp\"> Xabi Alonso <br>",
-                              "<input type=\"radio\" name=\"odp\"> Uli Hoeneß <br><input type=\"radio\" name=\"odp\"> Mathias Sammer <br> <input type=\"radio\" name=\"odp\"> Franz Beckenbauer <br><input type=\"radio\" name=\"odp\"> Karl-Heinz Rummenigge <br>",
-                              "<input type=\"radio\" name=\"odp\"> Niedźwiedź Berni <br><input type=\"radio\" name=\"odp\"> Niedźwiedź Fritz<br> <input type=\"radio\" name=\"odp\"> Lew Brian <br><input type=\"radio\" name=\"odp\"> Lew Erwin <br>",
-                              "<input type=\"radio\" name=\"odp\"> Manuel Neuer<br><input type=\"radio\" name=\"odp\"> Javi Martinez <br> <input type=\"radio\" name=\"odp\"> Arturo Vidal <br><input type=\"radio\" name=\"odp\"> Robert Lewandowski <br>",
-                              "<input type=\"radio\" name=\"odp\"> 1920 <br><input type=\"radio\" name=\"odp\"> 1930<br> <input type=\"radio\" name=\"odp\"> 1945 <br><input type=\"radio\" name=\"odp\"> 1900 <br>",
-                              "<input type=\"radio\" name=\"odp\"> Javi Martinez <br><input type=\"radio\" name=\"odp\"> Robert Lewandowski <br> <input type=\"radio\" name=\"odp\"> Xabi Alonso <br><input type=\"radio\" name=\"odp\"> Arturo Vidal <br>",
-                              "<input type=\"radio\" name=\"odp\"> Gerd Muller <br><input type=\"radio\" name=\"odp\"> Bastian Schweinstiger <br> <input type=\"radio\" name=\"odp\"> Oliver Kahn <br><input type=\"radio\" name=\"odp\"> Josef Maier <br>",
-                              "<input type=\"radio\" name=\"odp\"> 1 <br><input type=\"radio\" name=\"odp\"> 2<br> <input type=\"radio\" name=\"odp\"> 3 <br><input type=\"radio\" name=\"odp\"> 4 <br>",
-                              "<input type=\"radio\" name=\"odp\"> 20 <br><input type=\"radio\" name=\"odp\"> 25 <br> <input type=\"radio\" name=\"odp\"> 30 <br><input type=\"radio\" name=\"odp\"> 35 <br>",
-                              "<input type=\"radio\" name=\"odp\"> 0 <br><input type=\"radio\" name=\"odp\"> 1<br> <input type=\"radio\" name=\"odp\"> 2 <br><input type=\"radio\" name=\"odp\"> 3 <br>",
-                              "<input type=\"radio\" name=\"odp\"> 95 tys. <br><input type=\"radio\" name=\"odp\"> 65 tys. <br> <input type=\"radio\" name=\"odp\"> 85 tys. <br><input type=\"radio\" name=\"odp\"> 75 tys. <br>",
-                              "<input type=\"radio\" name=\"odp\"> Thiago Alcantara <br><input type=\"radio\" name=\"odp\"> Douglas Costa <br> <input type=\"radio\" name=\"odp\"> Arturo Vidal <br><input type=\"radio\" name=\"odp\"> Arjen Robben <br>",
-                              "<input type=\"radio\" name=\"odp\"> 2010/11 <br><input type=\"radio\" name=\"odp\"> 2011/12<br> <input type=\"radio\" name=\"odp\"> 2012/13 <br><input type=\"radio\" name=\"odp\"> 2013/14 <br>",
-                              "<input type=\"radio\" name=\"odp\">  Thiago Alcantara <br><input type=\"radio\" name=\"odp\"> Douglas Costa <br> <input type=\"radio\" name=\"odp\"> Frank Ribery <br><input type=\"radio\" name=\"odp\"> Thomas Muller <br>",
-                              "<input type=\"radio\" name=\"odp\"> 5-0 <br><input type=\"radio\" name=\"odp\"> 4-0<br> <input type=\"radio\" name=\"odp\"> 7-0 <br><input type=\"radio\" name=\"odp\"> 6-0 <br>"];
+            let odpowiedzi = ["<input type=\"radio\" name=\"odp\"> Arjen Robben <br><input type=\"radio\" name=\"odp\"> Philipp Lahm <br> <input type=\"radio\" name=\"odp\"> Tom Starke <br><input type=\"radio\" name=\"odp\"> Xabi Alonso <br>",
+                "<input type=\"radio\" name=\"odp\"> Uli Hoeneß <br><input type=\"radio\" name=\"odp\"> Mathias Sammer <br> <input type=\"radio\" name=\"odp\"> Franz Beckenbauer <br><input type=\"radio\" name=\"odp\"> Karl-Heinz Rummenigge <br>",
+                "<input type=\"radio\" name=\"odp\"> Niedźwiedź Berni <br><input type=\"radio\" name=\"odp\"> Niedźwiedź Fritz<br> <input type=\"radio\" name=\"odp\"> Lew Brian <br><input type=\"radio\" name=\"odp\"> Lew Erwin <br>",
+                "<input type=\"radio\" name=\"odp\"> Manuel Neuer<br><input type=\"radio\" name=\"odp\"> Javi Martinez <br> <input type=\"radio\" name=\"odp\"> Arturo Vidal <br><input type=\"radio\" name=\"odp\"> Robert Lewandowski <br>",
+                "<input type=\"radio\" name=\"odp\"> 1920 <br><input type=\"radio\" name=\"odp\"> 1930<br> <input type=\"radio\" name=\"odp\"> 1945 <br><input type=\"radio\" name=\"odp\"> 1900 <br>",
+                "<input type=\"radio\" name=\"odp\"> Javi Martinez <br><input type=\"radio\" name=\"odp\"> Robert Lewandowski <br> <input type=\"radio\" name=\"odp\"> Xabi Alonso <br><input type=\"radio\" name=\"odp\"> Arturo Vidal <br>",
+                "<input type=\"radio\" name=\"odp\"> Gerd Muller <br><input type=\"radio\" name=\"odp\"> Bastian Schweinstiger <br> <input type=\"radio\" name=\"odp\"> Oliver Kahn <br><input type=\"radio\" name=\"odp\"> Josef Maier <br>",
+                "<input type=\"radio\" name=\"odp\"> 1 <br><input type=\"radio\" name=\"odp\"> 2<br> <input type=\"radio\" name=\"odp\"> 3 <br><input type=\"radio\" name=\"odp\"> 4 <br>",
+                "<input type=\"radio\" name=\"odp\"> 20 <br><input type=\"radio\" name=\"odp\"> 25 <br> <input type=\"radio\" name=\"odp\"> 30 <br><input type=\"radio\" name=\"odp\"> 35 <br>",
+                "<input type=\"radio\" name=\"odp\"> 0 <br><input type=\"radio\" name=\"odp\"> 1<br> <input type=\"radio\" name=\"odp\"> 2 <br><input type=\"radio\" name=\"odp\"> 3 <br>",
+                "<input type=\"radio\" name=\"odp\"> 95 tys. <br><input type=\"radio\" name=\"odp\"> 65 tys. <br> <input type=\"radio\" name=\"odp\"> 85 tys. <br><input type=\"radio\" name=\"odp\"> 75 tys. <br>",
+                "<input type=\"radio\" name=\"odp\"> Thiago Alcantara <br><input type=\"radio\" name=\"odp\"> Douglas Costa <br> <input type=\"radio\" name=\"odp\"> Arturo Vidal <br><input type=\"radio\" name=\"odp\"> Arjen Robben <br>",
+                "<input type=\"radio\" name=\"odp\"> 2010/11 <br><input type=\"radio\" name=\"odp\"> 2011/12<br> <input type=\"radio\" name=\"odp\"> 2012/13 <br><input type=\"radio\" name=\"odp\"> 2013/14 <br>",
+                "<input type=\"radio\" name=\"odp\">  Thiago Alcantara <br><input type=\"radio\" name=\"odp\"> Douglas Costa <br> <input type=\"radio\" name=\"odp\"> Frank Ribery <br><input type=\"radio\" name=\"odp\"> Thomas Muller <br>",
+                "<input type=\"radio\" name=\"odp\"> 5-0 <br><input type=\"radio\" name=\"odp\"> 4-0<br> <input type=\"radio\" name=\"odp\"> 7-0 <br><input type=\"radio\" name=\"odp\"> 6-0 <br>"
+            ];
 
-            let photos =["<img src=\"Obrazy/Quiz/starzy.jpg\">",
-                         "<img src=\"Obrazy/Quiz/prezydent.jpg\">",
-                         "<img src=\"Obrazy/Quiz/maskotki.jpg\">",
-                         "<img src=\"Obrazy/Quiz/drogi.jpg\">",
-                         "<img src=\"Obrazy/Quiz/zalozenie.jpg\">",
-                         "<img src=\"Obrazy/Quiz/zoltakartka.jpg\">",
-                         "<img src=\"Obrazy/Quiz/najwiecejmeczow.jpg\">",
-                         "<img src=\"Obrazy/Quiz/porazki.jpg\">",
-                         "<img src=\"Obrazy/Quiz/bundesliga.jpg\">",
-                         "<img src=\"Obrazy/Quiz/porazka.jpg\">",
-                         "<img src=\"Obrazy/Quiz/alianzarena.jpg\">",
-                         "<img src=\"Obrazy/Quiz/gole.jpg\">",
-                         "<img src=\"Obrazy/Quiz/korona.jpg\">",
-                         "<img src=\"Obrazy/Quiz/asysta.jpg\">",
-                         "<img src=\"Obrazy/Quiz/bayernvsbremen.jpg\">"];
+            let photos = ["<img src=\"Obrazy/Quiz/starzy.jpg\">",
+                "<img src=\"Obrazy/Quiz/prezydent.jpg\">",
+                "<img src=\"Obrazy/Quiz/maskotki.jpg\">",
+                "<img src=\"Obrazy/Quiz/drogi.jpg\">",
+                "<img src=\"Obrazy/Quiz/zalozenie.jpg\">",
+                "<img src=\"Obrazy/Quiz/zoltakartka.jpg\">",
+                "<img src=\"Obrazy/Quiz/najwiecejmeczow.jpg\">",
+                "<img src=\"Obrazy/Quiz/porazki.jpg\">",
+                "<img src=\"Obrazy/Quiz/bundesliga.jpg\">",
+                "<img src=\"Obrazy/Quiz/porazka.jpg\">",
+                "<img src=\"Obrazy/Quiz/alianzarena.jpg\">",
+                "<img src=\"Obrazy/Quiz/gole.jpg\">",
+                "<img src=\"Obrazy/Quiz/korona.jpg\">",
+                "<img src=\"Obrazy/Quiz/asysta.jpg\">",
+                "<img src=\"Obrazy/Quiz/bayernvsbremen.jpg\">"
+            ];
 
+            var odpowiedz = document.getElementById("odpowiedz");
 
-            if (odpowiedz.odp[ansewrs[i]].checked == true){
+            if (odpowiedz.odp[ansewrs[i]].checked == true) {
                 dobrze++;
             }
 
             var numerpytania = document.getElementById("numerpytania");
-            numerpytania.innerHTML=questionnumber[i];
+            numerpytania.innerHTML = questionnumber[i];
 
             var pytanie = document.getElementById("pytanie");
             pytanie.innerHTML = question[i];
 
-            var odpowiedz = document.getElementById("odpowiedz");
             odpowiedz.innerHTML = odpowiedzi[i];
 
             var photo = document.getElementById("zdjecie");
             photo.innerHTML = photos[i];
 
-        
-        if (i == questionnumber.length){
-            var photo = document.getElementById("zdjecie");
-            photo.innerHTML = VidalX.jpg;
-            var numerpytania = document.getElementById("numerpytania");
-             numerpytania.innerHTML="Gratulacje!";
-            var pytanie = document.getElementById("pytanie");
-             pytanie.innerHTML = "Uzyskałeś dobry wynik";
-            var odpowiedz = document.getElementById("odpowiedz");
-            odpowiedz.innerHTML = "";
-            alert("Zdobyłeś " + dobrze + " punktów!");
+
+            if (i == questionnumber.length) {
+                var photo = document.getElementById("zdjecie");
+                photo.innerHTML = VidalX.jpg;
+                var numerpytania = document.getElementById("numerpytania");
+                numerpytania.innerHTML = "Gratulacje!";
+                var pytanie = document.getElementById("pytanie");
+                pytanie.innerHTML = "Uzyskałeś dobry wynik";
+                var odpowiedz = document.getElementById("odpowiedz");
+                odpowiedz.innerHTML = "";
+                alert("Zdobyłeś " + dobrze + " punktów!");
+            }
         }
-    }
-</script>
+    </script>
 
-	<link type="text/css" rel="stylesheet" href="Gratulacje.css" />
+    <link type="text/css" rel="stylesheet" href="Gratulacje.css" />
 </head>
+
 <body>
-<div id="calastrona">
-<h1 id="numerpytania">Pytanie 1</h1>
-<p id="zdjecie"><img src="Obrazy/Quiz/starzy.jpg"></p>
-<h2 id="pytanie">Kto jest najstarszym zawodnikiem Bayernu?</h2>
-<form id="odpowiedz">
-<input type="radio" name="odp"> Arjen Robben <br>
-<input type="radio" name="odp"> Philipp Lahm <br>
-<input type="radio" name="odp"> Tom Starke <br>
-<input type="radio" name="odp"> Xabi Alonso <br>
-</form>
+    <div id="calastrona">
+        <h1 id="numerpytania">Pytanie 1</h1>
+        <p id="zdjecie"><img src="Obrazy/Quiz/starzy.jpg"></p>
+        <h2 id="pytanie">Kto jest najstarszym zawodnikiem Bayernu?</h2>
+        <form id="odpowiedz">
+            <input type="radio" name="odp"> Arjen Robben <br>
+            <input type="radio" name="odp"> Philipp Lahm <br>
+            <input type="radio" name="odp"> Tom Starke <br>
+            <input type="radio" name="odp"> Xabi Alonso <br>
+        </form>
 
 
-<input type="button" onclick="next()" value="Następne pytanie">
-</div>
+        <input type="button" onclick="next()" value="Następne pytanie">
+    </div>
 </body>
+
 </html>
