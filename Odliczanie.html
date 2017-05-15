@@ -6,18 +6,36 @@
 	<title>Odliczanie</title>
 	<script>
 	
-    setTimeout(odliczanie, 3000);
+    setTimeout(odliczanie, 1000);
 
-    var data = new Date();
-    var rok = data.getFullYear();
-    var mies = data.getMonth();
-    var dzien = data.getDate();
-    var godz = data.getHours();
-    var min = data.getMinutes();
-    var sec = data.getSeconds();
+
 
 	function odliczanie(){
+        var data = new Date();
+        var rok = data.getFullYear();
+        var mies = data.getMonth();
+        var dzien = data.getDate();
+        var godz = data.getHours();
+        var min = data.getMinutes();
+        var sec = data.getSeconds();
 
+        let Month = document.getElementById("month");
+        Month.innerText = mies;
+
+        let Day = document.getElementById("day");
+        Day.innerText = dzien;
+
+        let Hour = document.getElementById("hour");
+        Hour.innerText = godz;
+
+        let Minute = document.getElementById("minute");
+        Minute.innerText = min;
+
+        let Second = document.getElementById("second");
+        Second.innerText = sec;
+
+        setTimeout(odliczanie, 1000);
+        
 	}
 
 	</script>
@@ -25,12 +43,21 @@
 </head>
 <body>
 <div id="calastrona">
-<h1>Tyle zostało do wakacji:</h1>
-<p id="month">.</p>
-<p id="day"></p>
-<p id="hour"></p>
-<p id="minute"></p>
-<p id="second"></p>
+<h1 id="H">Tyle zostało do wakacji:</h1>
+<table>
+<th><p id="month">1</p></th>
+<th><p id="day">2</p></th>
+<th><p id="hour">3</p></th>
+<th><p id="minute">4</p></th>
+<th><p id="second">5</p></th>
+</table>
+<table>
+<th><p>miesięcy</p></th>
+<th><p>dni</p></th>
+<th><p>godzin</p></th>
+<th><p>minut</p></th>
+<th><p>sekund</p></th>      
+</table>
 </div>
 </body>
 </html>
