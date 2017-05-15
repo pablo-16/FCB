@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Odliczanie</title>
+	<script>
+	
+    setTimeout(odliczanie, 3000);
+
+    var data = new Date();
+    var rok = data.getFullYear();
+    var mies = data.getMonth();
+    var dzien = data.getDate();
+    var godz = data.getHours();
+    var min = data.getMinutes();
+    var sec = data.getSeconds();
+
+	function odliczanie(){
+
+	}
+
+	</script>
+	<link type="text/css" rel="stylesheet" href="odliczanie.css" />
+</head>
+<body>
+<div id="calastrona">
+<h1>Tyle zostało do wakacji:</h1>
+<p id="month">.</p>
+<p id="day"></p>
+<p id="hour"></p>
+<p id="minute"></p>
+<p id="second"></p>
+</div>
+</body>
+</html>
