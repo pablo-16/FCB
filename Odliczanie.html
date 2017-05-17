@@ -9,22 +9,22 @@
     setTimeout(odliczanie, 0000);
 
 	function odliczanie(){
-    var date1 = new Date();
-    var date2 = new Date("23/Jun/2017 12:00:00");
+        var date1 = new Date();
+        var date2 = new Date("23/Jun/2017 12:00:00");
 
-    var diff = date2.getTime() - date1.getTime();
+        var diff = date2.getTime() - date1.getTime();
 
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    diff -=  days * (1000 * 60 * 60 * 24);
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -=  days * (1000 * 60 * 60 * 24);
 
-    var hours = Math.floor(diff / (1000 * 60 * 60));
-    diff -= hours * (1000 * 60 * 60);
+        var hours = Math.floor(diff / (1000 * 60 * 60));
+        diff -= hours * (1000 * 60 * 60);
 
-    var mins = Math.floor(diff / (1000 * 60));
-    diff -= mins * (1000 * 60);
+        var mins = Math.floor(diff / (1000 * 60));
+        diff -= mins * (1000 * 60);
 
-    var seconds = Math.floor(diff / (1000));
-    diff -= seconds * (1000);
+        var seconds = Math.floor(diff / (1000));
+        diff -= seconds * (1000);
 
         let Day = document.getElementById("day");
         Day.innerText = days;
@@ -37,39 +37,6 @@
 
         let Second = document.getElementById("second");
         Second.innerText =  seconds;
-
-
-
-
-        setTimeout(odliczanie, 1000); 
-	}
-
-	</script>
-	<link type="text/css" rel="stylesheet" href="odliczanie.css" />
-</head>
-<body>
-<div id="calastrona">
-<h1 id="H">Tyle zostało do wakacji <br> (23 czerwca godz 12:00):</h1>
-<table id="czas">
-<th><p id="day"></p></th>
-<th><p id="hour"></p></th>
-<th><p id="minute"></p></th>
-<th><p id="second"></p></th>
-</table>
-<table id="podpisy">
-<th><p id="dni">dni</p></th>
-<th><p id="godzin">godzin</p></th>
-<th><p id="minut">minut</p></th>
-<th><p id="sekund">sekund</p></th>      
-</table>
-</div>
-</body>
-</html>
-
-
-
-
-//
 
         let Dni = document.getElementById("dni");
         if(days==1){
@@ -99,19 +66,62 @@
          if((mins>1 && mins<5) || (mins>21 && mins<25) || (mins>31 && mins<35) || (mins>41 && mins<45) || (mins>51 && mins<55)){
             Minut.innerText = "minuty";
         }
-         if((mins>4 && mins<22) || (mins>24 && mins<32) || (mins>34 && mins<42) || (mins>44 && mins<52) || (mins>54 && mins<62) {
+         if((mins>4 && mins<22) || (mins>24 && mins<32) || (mins>34 && mins<42) || (mins>44 && mins<52) || (mins>54 && mins<62)) {
             Minut.innerText = "minut";
         }
 
 
         let Sekund = document.getElementById("sekund");
-         if(seconds==1){
-            Sekund.innerText = "sekunda";
+        Sekund.innerText = getSecondsDescription(seconds);
+
+        setTimeout(odliczanie, 1000); 
+	}
+
+    function getSecondsDescription(seconds){
+
+        if(seconds==1){
+            return "sekunda";
         }
-         if((seconds>1 && seconds<5) || (seconds>21 && seconds<25) || (seconds>31 && seconds<35) || (seconds>41 && seconds<45) || (seconds>51 && seconds<55)){
-            Sekund.innerText = "sekundy";
+
+        if(seconds>1 && seconds<5){
+            return "sekundy";
         }
-         if((seconds>4 && seconds<22) || (seconds>24 && seconds<32) || (seconds>34 && seconds<42) || (seconds>44 && seconds<52) || (seconds>54 && seconds<62) {
-            Sekund.innerText = "sekund";
+         if(seconds>4 && seconds<21) {
+            return "sekund";
         }
-//
+
+        if(seconds > 20)  {
+            let s = seconds % 10;
+
+            if(s>1 && s<5){
+                return "sekundy";
+            }
+        }
+        return "sekund";
+    }
+
+	</script>
+	<link type="text/css" rel="stylesheet" href="odliczanie.css" />
+</head>
+<body>
+<div id="calastrona">
+<h1 id="H">Tyle zostało do wakacji <br> (23 czerwca godz 12:00):</h1>
+<table id="czas">
+<th><p id="day"></p></th>
+<th><p id="hour"></p></th>
+<th><p id="minute"></p></th>
+<th><p id="second"></p></th>
+</table>
+<table id="podpisy">
+<th><p id="dni">dni</p></th>
+<th><p id="godzin">godzin</p></th>
+<th><p id="minut">minut</p></th>
+<th><p id="sekund">sekund</p></th>      
+</table>
+</div>
+</body>
+</html>
+
+
+
+
