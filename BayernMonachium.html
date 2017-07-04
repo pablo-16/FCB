@@ -2,8 +2,34 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Oficjalna Strona Bayernu Monachium</title>
+
+<script>
+
+let naglowki = [
+	"sklep",
+	"terminarz",
+	"bilety",
+	"klub",
+	"tabela",
+	"gry"
+];
+
+var numbers = [0, 1, 2, 3, 4, 5];
+
+
+function mouseOver() {
+    document.getElementById("sklep").style.color = "orange";
+}
+
+function mouseOut() {
+    document.getElementById("sklep").style.color = "white";
+}
+
+</script>
+
+
 	<link type="text/css" rel="stylesheet" href="BayernMonachium.css" />
 </head>
 <body>
@@ -14,64 +40,58 @@
 	<div id="opcjedowybrania">
 	<table>
 	<tr>
-	<th><a href="https://fcbayern.com/shop/en/?emsrc=coop&refID=header-link/en"	title="Sklep dla fanów">Sklep</a></th>
-	<th><a href="terminarz.html"	title="Zobacz rozpiskę najbliższych meczy">Terminarz</a></th>
-	<th><a href="https://fcbayern.com/en/tickets"	title="Kup bilet na mecz">Bilety</a></th>
-	<th><a href="klub.html"	title="Dowiedz się więcej o Bayernie">Klub</a></th>
-	<th><a href="tabela.html"	title="Zobacz tebelę Bundesligi">Tabela</a></th>
-	<th><a href="grybayernu.html"	title="Zagraj w gry o Bayernie">Gry</a></th>
+	<th><a  id="sklep" onmouseover="mouseOver()" onmouseout="mouseOut()" href="https://fcbayern.com/shop/en/?emsrc=coop&refID=header-link/en"	title="Sklep dla fanĂłw">Sklep</a></th>
+	<th><a  id="terminarz" onmouseover="mouseOver1()" onmouseout="mouseOut1()" href="http://spielplan.bundesliga.de/"	title="Zobacz rozpiskÄ najbliĹźszych meczy">Terminarz</a></th>
+	<th><a  id="bilety" onmouseover="mouseOver2()" onmouseout="mouseOut2()"  href="https://fcbayern.com/en/tickets"	title="Kup bilet na mecz">Bilety</a></th>
+	<th><a  id="klub" onmouseover="mouseOver3()" onmouseout="mouseOut3()"  href="klub.html"	title="Dowiedz siÄ wiÄcej o Bayernie">Klub</a></th>
+	<th><a  id="tabela" onmouseover="mouseOver4()" onmouseout="mouseOut4()"  href="tabela.html"	title="Zobacz tebelÄ Bundesligi">Tabela</a></th>
+	<th><a  id="gry" onmouseover="mouseOver5()" onmouseout="mouseOut5()"  href="grybayernu.html"	title="Zagraj w gry o Bayernie">Gry</a></th>
 	</tr>
 	</table>
 	</div>
 	<div id="pasekboczny">
-	<h3>Lewandowski<br> zawodnikiem meczu</h3>
+	<h3>Urodziny<br> wielkiej osoby</h3>
 	<img src="Obrazy/lewandowski.png">
-	<p> Hat-trick i dwie asysty - to dorebek naszego <br>najlepszego napastnika z 
-		sobotniego meczu z Augsburgiem. Niemal<br> cały świat zachwycał się skutecznością<br> Polaka, lecz
-		również jego piękną asystą.<br>  Lewandowski na nowozostał królem strzelców.<br> Bezkonkurencyjny zawodnik meczu.
+	<p> 6 Sierpnia, czyli wĹasnie dziĹ, swoje 72 urodziny obchodzi wielki czĹowiek - wierny kibic
+		Bayernu Monachium, a takĹźe wspaniaĹy dziadek. OczywiĹcie mowa tu o Wernerze Tkocz! JeĹli wĹaĹnie
+		czytasz te sĹowa, zapraszam CiÄ rĂłwnieĹź do <a href="Ĺźyczenia.html">przeczytania ĹźyczeĹ</a>, jakie chciaĹbym Ci dziĹ zĹoĹźyÄ.
 	</p>
 	</div>
 	<h2>Newsy</h2>
-	<img src="Obrazy/neuer.jpg" ></br>
+	<img src="Obrazy/transfery.jpg" ></br>
 	<div id="opisnewsa1">
-	<h3> Manuel Neuer kontuzjowany</h3>
-	<p>Nigdy nie ma odpowiedniego momentu na kontuzje, ale ta
-	w przypadku Manuela Neuera nadeszła wyjątkowo nie w porę. 31-letni golkiper doznał 
- bowiem w środku tygodnia urazu stopy i pewne jest, 
- że nie zagra w dwóch nadchodzących kolejkach przeciwko
- Augsburgowi oraz TSG 1899 Hoffenheim.<a href="kontuzjaneuera.html">Czytaj dalej</a></p>
+	<h3> Bayern na transferowych zakupach + newsy na stronie </h3>
+	<p>Po zakoĹczeniu zeszĹego sezonu, apetyt na Puchar Niemiec i przede wszystkim LigÄ MistzrĂłw znacznie wzrĂłsĹ. 
+			WĹadze Bayernu doszĹy do wniosku, Ĺźe niezbÄdne bÄdzie dokonanie kilku transferĂłw i odmĹodzenie druĹźyny. 
+			Dotychczas do klubu z Bawarii przeszĹo czterech zawodnikĂłw.<a href="kontuzjaneuera.html">Czytaj dalej</a></p>
  </div>
-	<img src="Obrazy/6do0.jpg" ></br>
+	<img src="Obrazy/Costa.jpg" ></br>
 	<div id="opisnewsa2">
-	<h3>Pewna wygrana 6:0</h3>
-	<p>W 26 kolejce Bayern mierzył się z Augsburgiem. Choć od dawna było 
-	wiadomo kto jest faworytem, to nikt nie spodziewał się aż tak wysokiego wyniku. 
-	Po fantastycznym maczy ROberta Lewandowskiego Bayern zgromił ruwala aż 6 do 0
-	i umocnił się na pozycji lidera Bundesligi.<a href="pewnawygrana.html">Czytaj dalej</a></p>
+	<h3>Co dalej z Douglasem Costom? + ZakoĹczenie kariery</h3>
+	<p>PrzyszĹoĹÄ Costy jest bardzo niepewna. Brazylijczyk po Ĺwietnym starcie, zĹapaĹ dolegliwe kontuzje i 
+		wypadĹ z formy. W zaszĹym sezonie graĹ maĹo i nie jest zadowolony z takiego stanu rzeczy. WIele mĂłwiĹo siÄ 
+		o jego transferze do wĹoskiego Juventusu.<a href="pewnawygrana.html">Czytaj dalej</a></p>
 	</div>
 	<img src="Obrazy/boateng.jpg" >
 	<div id="opisnewsa3">
-	<h3>Powrót Boatenga</h3>
-	<p>Jak poinformował trener Bayernu - Carlo Ancelotti - Jerome Boateng
-	jest już zdrowy. Podobno już od paru dni trenuje indywidualnie, a za 
-	około tydzień, powinien być gotowy do gry. Najważniejszym pytaniem jednak 
-	jest, czy zdąży wrócić do formy na mecze z Realem?<br><a href="powrotboatenga.html">Czytaj dalej</a></p>
+	<h3>Okres przygotowawczy czas zaczÄÄ! + Odliczanie</h3>
+	<p>Od 1 lipca Bayern rozpoczÄĹ przygotowawczy okres do nowego sezonu. Ma on sĹuĹźyÄ zawodnikom do powrotu
+		do formy, a takĹźe pozyskanym talentom do pokazania swoich umiejÄtnoĹci. Podczas tego czasu 
+		zostanÄ rozegrane tewarzyskie mecze.<br><a href="powrotboatenga.html">Czytaj dalej</a></p>
 	</div>
 	<p><a href="wiecejnewsow.html" 
-			title="Więcej newsów" >Więcej newsów</a>
+			title="WiÄcej newsĂłw" >WiÄcej newsĂłw</a>
 			</p>
 	<div id="ankieta">
-	<p>Już w środę, 12 kwietnia, Bayern zagra pierwszy mecz z Realem Madrid
-	w ramach ćwierćfinału Ligi Mistrzów. Spotkanie zostanie rozegrane na 
-	Alianz Arenie o godzinie 20:45. To bez wątpienia jeden z najtrudniejszych
-	meczów w tym sezonie. Liczymy na przełamanie złej passy w LM i wygraną
-	z hiszpańskim klubem oraz awans do półfinału. Aby pomóc selekcjonerowi 
-	prosimy o to, byś <a href="ankieta.html" title="Wypełnij ankietę"> wypełnił ankietę</a>.
+	<p>JuĹź w sobotÄ, 28 sierpnia, Bayern zagra inauguracujny mecz Bundesligi z Bayerem Leverkusen
+	Spotkanie zostanie rozegrane na Alianz Arenie o godzinie 20:00. To bardzo waĹźny mecz dla zespoĹu - zarĂłwno trenera jak i 
+	nowych zawodnikĂłw. Liczymy na zwyciÄstowo MonachijczykĂłw, ktĂłre doda im wiatru w Ĺźaagle i poprowadzi do kolejnego
+	mistrzostwa.  Aby pomĂłc selekcjonerowi w wyborze skĹadu prosimy o to, byĹ <a href="ankieta.html" title="WypeĹnij ankietÄ"> wypeĹniĹ ankietÄ</a>.
 	</div>
 	<div id="stopka">
 	<p>
       &copy; 2017, Oficjalna strona Bayernu Monachium<br />
-      Wszystkie znaki firmowe pojawiające się na tej stronie należą do ich właścicieli.
+      Wszystkie znaki firmowe pojawiajÄce siÄ na tej stronie naleĹźÄ do ich wĹaĹcicieli.
     </p>
 	</div>
 	</div>
