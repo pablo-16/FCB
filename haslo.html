@@ -4,28 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Hasło</title>
-	<script>
-	
-	function init(){
-		var sprawdzhaslo = document.getElementById("sprawdzhaslo");
-		sprawdzhaslo.onclick = checkpassword;
-	}
-	
-	function checkpassword(){
-		var yourpasswordInput = document.getElementById("haslo");
-		var yourpassword = yourpasswordInput.value;
-		if (yourpassword === "Ancelotti")
-			{
-			window.location.href = "BayernMonachium.html";
-			}
-			else {
-			alert ("Wpisałeś niepoprawne hasło!");
-			}
-	}
-	
-	window.onload = init;
-	
-	</script>
+	<script src="haslo.js"></script>
 	<link type="text/css" rel="stylesheet" href="haslo.css" />
 </head>
 <body>
