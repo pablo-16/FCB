@@ -4,41 +4,70 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Terminarz</title>
+	<script>
+	
+		function liverpool(){
+			var tytul = document.getElementById("tytul");
+			var opis = document.getElementById("opis"); 
+			tytul.innerHTML = "Bayern Monachium vs FC Liverpool";
+			opis.innerHTML = "godzina rozpoczęcia: <em>20:30</em> <br> rozgrywki: <em>Audi Cup 2017</em> <br> faza: <em> półfinał </em> <br>  stadion: <em>Allianz Arena</em> <br> sędzia: <em> Paweł Tkocz </em>";
+		}
+
+
+	</script>
 	<link type="text/css" rel="stylesheet" href="terminarz.css" />
 </head>
 <body>
 <div id="calastrona">
-<table>
-<tr><h1>Kwiecień</h1>
-<ul>
-<li><span class="kiedy">12 kwietnia 20:45,</span> <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-<li><span class="kiedy">15 kwietnia 18:30,</span> <span class="kto">Bayer Leverkusen vs Bayern Monachium</span></li>
-<li><span class="kiedy">18 kwietnia 20:45,</span> <span class="kto">Real Madryd vs Bayern Monachium</span></li>
-<li><span class="kiedy">22 kwietnia 15:30,</span> <span class="kto">Bayern Monachium vs FSV Mainz</span></li>
-<li><span class="kiedy">28 kwietnia 20:45,</span> <span class="kto">VFL Wolfsburg vs Bayern Monachium</span></li>
-</ul>
-<h1>Maj</h1>
-<ul>
-<li><span class="kiedy">5 maj 15:30,</span> <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-<li><span class="kiedy">13 maj 18:30,</span> <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-<li><span class="kiedy">20 maj 15:30,</span>  <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-</ul>
-<h1>Czerwiec</h1>
-<ul>
-<li><span class="kiedy">12 kwietnia 20:45,</span> <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-<li><span class="kiedy">15 kwietnia 18:30,</span> <span class="kto">Bayer Leverkusen vs Bayern Monachium</span></li>
-<li><span class="kiedy">18 kwietnia 20:45,</span> <span class="kto">Real Madryd vs Bayern Monachium</span></li>
-<li><span class="kiedy">22 kwietnia 15:30,</span> <span class="kto">Bayern Monachium vs FSV Mainz</span></li>
-<li><span class="kiedy">28 kwietnia 20:45,</span> <span class="kto">VFL Wolfsburg vs Bayern Monachium</span></li>
-</ul>
-<h1>Lipiec</h1>
-<ul>
-<li><span class="kiedy">5 maj 15:30,</span> <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-<li><span class="kiedy">13 maj 18:30,</span> <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-<li><span class="kiedy">20 maj 15:30,</span>  <span class="kto">Bayern Monachium vs Real Madryd</span></li>
-</ul>
-</tr>
-</table>
+	<table>
+		<tr>
+			<th></th>
+			<th onclick="liverpool()"></th>
+			<th onclick="final()"></th>
+			<th onclick="tolisso()"></th>
+			<th></th>
+			<th onclick="borussia()"></th>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th onclick="puchar()"></th>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th onclick="bayer()"></th>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr>
+			<th onclick="lewandowski()"></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th onclick="werder()"></th>
+			<th></th>
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</table>
+	<h1 id="tytul">Kliknij na wybrany dzień, aby dowiedzieć się więcej</h1>
+	<p id="opis"></p>
 </div>
 </body>
 </html>

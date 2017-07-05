@@ -3,34 +3,25 @@ body {
 }
 
 #calastrona {
+	padding-top: 0px;
+	margin-top: 0px;
 	width: 980px;
 	height: 1100px;
 	background-color: #F83D3D;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	background-image: url(Obrazy/sierpień.png);
+	background-repeat: no-repeat;
 }
 
-.kiedy {
-	font-size: 15px;
-	font-style: italic;
+
+table {
+	padding-top: 190px;
 }
 
-.kto {
-	font-size: 16px;
-	font-weight: bold;
-}
+tr, th {
+	padding: 67px;
+	margin: 25px;
 
-h1 {
-	color: orange;
-	font-size: 300%;
-	font-weight: bold;
-}
-
-tr {
-	border: thin dotted blue;
-}
-
-li {
-	text-align: center;
 }
